@@ -2,7 +2,7 @@
 
 **PPO-based quadrotor flight control with collective-thrust and body-rate actions, and policy export for evaluation in PX4–Gazebo.**
 
-This repository is the **Flightmare training component** of the [Robust Goal-Directed Aerial Manipulation project](https://github.com/1shit4/aerial-manipulation-rl-control). The broader work investigates learning coordinated flight commands and combining them with lower-level controllers for robust aerial manipulation. Here, the focus is on **training a standalone quadrotor policy**, defining its observation/action interface, and transferring the learned policy to a separate flight-control simulation.
+This repository is the **Flightmare training component** of the [Robust Goal-Directed Aerial Manipulation project](https://github.com/ishita-chaudhary/aerial-manipulation-rl-control). The broader work investigates learning coordinated flight commands and combining them with lower-level controllers for robust aerial manipulation. Here, the focus is on **training a standalone quadrotor policy**, defining its observation/action interface, and transferring the learned policy to a separate flight-control simulation.
 
 The implementation builds on the open-source [Flightmare simulator](https://github.com/uzh-rpg/flightmare), with modifications to the quadrotor environment, dynamics, rewards, training scripts, and policy-export workflow.
 
@@ -95,7 +95,7 @@ The export branch writes an ONNX model to the working directory. A compatible Fl
 
 The exported Flightmare policy was evaluated in a separate **PX4–Gazebo** simulation to examine how learned flight commands behave when the vehicle dynamics, observation interfaces, and actuation pipeline differ from those used during training.
 
-The companion repository, **[RLQuadcopterControlFlightmare](https://github.com/1shit4/RLQuadcopterControlFlightmare)**, implements the ROS 2/PX4 observation reconstruction, ONNX inference, body-rate feedback, and conversion to individual motor commands. That repository also contains the sim-to-sim flight-control experiments; this repository contains the **training-side implementation**.
+The companion repository, **[RLQuadcopterControlFlightmare](https://github.com/ishita-chaudhary/RLQuadcopterControlFlightmare)**, implements the ROS 2/PX4 observation reconstruction, ONNX inference, body-rate feedback, and conversion to individual motor commands. That repository also contains the sim-to-sim flight-control experiments; this repository contains the **training-side implementation**.
 
 ## Key Files
 
@@ -111,8 +111,8 @@ The companion repository, **[RLQuadcopterControlFlightmare](https://github.com/1
 
 ## Related Projects and Attribution
 
-- [Robust Goal-Directed Aerial Manipulation](https://github.com/1shit4/aerial-manipulation-rl-control) — overall research project and repository index.
-- [Flightmare Policy Inference in PX4–Gazebo](https://github.com/1shit4/RLQuadcopterControlFlightmare) — evaluation-side implementation for exported policies.
+- [Robust Goal-Directed Aerial Manipulation](https://github.com/ishita-chaudhary/aerial-manipulation-rl-control) — overall research project and repository index.
+- [Flightmare Policy Inference in PX4–Gazebo](https://github.com/ishita-chaudhary/RLQuadcopterControlFlightmare) — evaluation-side implementation for exported policies.
 - [Original Flightmare](https://github.com/uzh-rpg/flightmare) — quadrotor simulator developed by the Robotics and Perception Group at the University of Zurich. The original Flightmare framework and baseline code belong to their authors; this repository documents research modifications and experiments built on that framework.
 
 *Research conducted at the Robotics Research Center, IIIT Hyderabad.*
